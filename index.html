@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Baby Rhein ♡</title>
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎀</text></svg>">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@300;500&family=Gochi+Hand&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen">
+
+    <div id="game-view" class="flex flex-col items-center justify-center min-h-screen p-4">
+        <div
+            class="bg-white/80 p-8 rounded-3xl shadow-lg text-center max-w-sm w-full border-4 border-pink-100 backdrop-blur-md">
+            <div class="text-4xl mb-4">🎀</div>
+            <h1 class="fancy-font text-5xl text-pink-400 mb-2">Love Meter</h1>
+            <p class="text-gray-400 text-sm tracking-widest uppercase mb-8">Tap heart to enter</p>
+
+            <div onclick="clickHeart()" class="pulse-heart text-8xl mb-8 select-none drop-shadow-md">💖</div>
+
+            <div class="w-full bg-pink-100 rounded-full h-5 overflow-hidden">
+                <div id="progress-fill" class="bg-pink-400 h-full w-0 transition-all duration-200"></div>
+            </div>
+            <p id="progress-text" class="mt-2 font-bold text-pink-400">0%</p>
+        </div>
+    </div>
+
+    <div id="dashboard-view" class="flex flex-col items-center p-6 pb-40">
+
+        <div class="mt-10 mb-12 text-center relative">
+            <span class="absolute -top-6 -left-6 text-4xl">✨</span>
+            <div class="bg-white/90 px-10 py-4 rounded-full border border-pink-200 shadow-sm">
+                <h1 class="fancy-font text-6xl text-pink-500">Our Memories</h1>
+            </div>
+            <span class="absolute -bottom-6 -right-6 text-4xl">✨</span>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-pink-100 text-center mb-16 transform rotate-1">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-pink-200/50 rotate-[-2deg]"></div>
+            <p class="text-xs uppercase tracking-widest text-pink-300">Time Together</p>
+            <div id="uptime-display" class="text-2xl font-bold text-gray-600 mt-2">Loading...</div>
+        </div>
+
+        <div id="loading-msg" class="text-xl text-pink-400 handwriting animate-pulse">
+            Fetching our memories from the cloud... ☁️
+        </div>
+
+        <div id="photo-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-7xl px-4">
+        </div>
+        <div class="w-full max-w-4xl mt-24 mb-12 relative group">
+
+            <div
+                class="absolute -top-4 left-1/2 -translate-x-1/2 w-40 h-10 bg-pink-100/80 rotate-[-1deg] shadow-sm z-10">
+            </div>
+
+            <div
+                class="bg-[#fffbf0] p-10 md:p-16 shadow-[rgba(0,0,0,0.1)_10px_10px_30px] rotate-1 border border-pink-100 relative transition hover:rotate-0 duration-500">
+
+                <div class="absolute top-8 right-8 text-pink-200 text-6xl opacity-50 rotate-12 select-none">
+                    💌
+                </div>
+
+                <h2 class="fancy-font text-4xl md:text-5xl text-pink-500 mb-8">My baby Rhein...</h2>
+
+                <div class="handwriting text-2xl text-gray-600 leading-loose space-y-6">
+                    <!--i need to finish this later--> 
+                    <p>
+                        Happy Anniversary my baby :(( HUHUHU ang bilis, parang dati lang crush mo ako tapos ngayon +1 ka na sa bahay namin.
+                        I am so happy that after all this time, you chose me. 
+                    </p>
+                    <p>
+                       I thank all the stars everyday for 
+                    </p>
+                    <p>
+                        I love you more than words (or code) can explain.
+                    </p>
+                </div>
+
+                <div class="mt-12 text-right">
+                    <p class="fancy-font text-3xl text-pink-400">Forever Yours,</p>
+                    <p class="handwriting text-2xl text-gray-500 mt-2"> [ Your Name ] </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-24 text-pink-300 text-sm tracking-widest uppercase">
+        I love you so so so much, my baby.
+    </div>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="Last Night on Earth.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

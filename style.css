@@ -1,0 +1,89 @@
+/* --- PALETTE --- */
+:root {
+    --bg-color: #fff0f5;
+    --text-color: #9d5b75;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--bg-color);
+    background-image: radial-gradient(#ffb7c5 1px, transparent 1px);
+    background-size: 25px 25px;
+    color: var(--text-color);
+    overflow-x: hidden;
+    
+    /* Heart Cursor */
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎀</text></svg>") 16 0, auto;
+}
+
+.fancy-font {
+    font-family: 'Dancing Script', cursive;
+}
+
+.handwriting {
+    font-family: 'Gochi Hand', cursive;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.pulse-heart {
+    animation: heartbeat 1.5s infinite;
+    cursor: pointer;
+}
+
+/* Floating Animation for photos */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+/* --- POLAROID STYLES --- */
+.polaroid {
+    background: white;
+    padding: 12px 12px 50px 12px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.polaroid:hover {
+    transform: scale(1.05) rotate(0deg) !important;
+    z-index: 50;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Views */
+#dashboard-view {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#loading-msg {
+    display: none;
+}
+
+/* Change cursor to a pointing hand when hovering over buttons */
+button, .polaroid, .pulse-heart {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👆</text></svg>") 16 0, pointer;
+}
+
+/* --- FALLING HEARTS ANIMATION --- */
+.falling-heart {
+    position: fixed;
+    top: -10vh;
+    font-size: 1rem;
+    color: #ffb7c5;
+    user-select: none;
+    pointer-events: none; /* Let clicks pass through */
+    z-index: 0; /* Behind everything */
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
