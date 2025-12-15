@@ -53,7 +53,7 @@ function startTimer() {
 
     // 4. Display
     document.getElementById("uptime-display").innerHTML =
-        `${weeks} Weeks <span class="text-pink-300 px-1">♡</span> ${days} Days`;
+        `${weeks} Weeks <span class="text-pink-300 px-1">♡</span> ${days} Day/s`;
 }
 
 // --- SMART PHOTO FETCHER ---
@@ -147,3 +147,4 @@ function createHeart() {
 function startHeartRain() {
     setInterval(createHeart, 300); // New heart every 300ms
 }
+
