@@ -36,7 +36,7 @@ function clickHeart() {
 function startTimer() {
     // 1. Setup Date
     let startInput = CONFIG.startDate;
-     Force local time to fix the 1-day bug
+     //Force local time to fix the 1-day bug
     if (!startInput.includes("T")) startInput += "T00:00:00";
 
     const start = new Date(startInput).getTime();
@@ -53,7 +53,7 @@ function startTimer() {
 
     // 4. Display
     document.getElementById("uptime-display").innerHTML =
-        `${weeks} Weeks <span class="text-pink-300 px-1">♡</span> ${days} Days`;
+       `${weeks} Weeks <span class="text-pink-300 px-1">♡</span> ${days} Days`;
 }
 
 // --- SMART PHOTO FETCHER ---
@@ -148,4 +148,5 @@ function startHeartRain() {
     setInterval(createHeart, 300); // New heart every 300ms
 
 }
+
 
