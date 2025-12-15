@@ -1,5 +1,5 @@
 const CONFIG = {
-    startDate: "2024-12-16T00:00:00",
+    //startDate: "2024-12-16T00:00:00",
     // PASTE YOUR GOOGLE SHEET CSV LINK HERE
     sheetLink: "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5ky9E36YN2jQ9-VnEJhGWf__Atn-WZyD-lSl_o--G_e4gz2GPX4SB5Ers_BIAXsUBiFSumCI276JT/pub?output=csv"
 };
@@ -146,4 +146,5 @@ function createHeart() {
 // (We will call this inside the clickHeart function later)
 function startHeartRain() {
     setInterval(createHeart, 300); // New heart every 300ms
+
 }
