@@ -33,28 +33,28 @@ function clickHeart() {
     }
 }
 
-function startTimer() {
+//function startTimer() {
     // 1. Setup Date
-    let startInput = CONFIG.startDate;
+    //let startInput = CONFIG.startDate;
     // Force local time to fix the 1-day bug
-    if (!startInput.includes("T")) startInput += "T00:00:00";
+    //if (!startInput.includes("T")) startInput += "T00:00:00";
 
-    const start = new Date(startInput).getTime();
-    const now = new Date().getTime();
+    //const start = new Date(startInput).getTime();
+    //const now = new Date().getTime();
 
     // 2. Calculate Total Days
-    const difference = now - start;
-    const oneDay = 1000 * 60 * 60 * 24;
-    const totalDays = Math.floor(difference / oneDay);
+   // const difference = now - start;
+  //  const oneDay = 1000 * 60 * 60 * 24;
+  //  const totalDays = Math.floor(difference / oneDay);
 
     // 3. Convert to Weeks and Days
-    const weeks = Math.floor(totalDays / 7);
-    const days = totalDays % 7;
+//    const weeks = Math.floor(totalDays / 7);
+ //   const days = totalDays % 7;
 
     // 4. Display
-    document.getElementById("uptime-display").innerHTML =
-        `${weeks} Weeks <span class="text-pink-300 px-1">♡</span> ${days} Days`;
-}
+ //   document.getElementById("uptime-display").innerHTML =
+      //  `${weeks} Weeks <span class="text-pink-300 px-1">♡</span> ${days} Days`;
+//}
 
 // --- SMART PHOTO FETCHER ---
 async function fetchPhotos() {
@@ -148,3 +148,4 @@ function startHeartRain() {
     setInterval(createHeart, 300); // New heart every 300ms
 
 }
+
